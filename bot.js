@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "$"
-var adminprefix = '$'
+var prefix = "_"
+var adminprefix = '_'
 
 
 
@@ -9,7 +9,7 @@ var adminprefix = '$'
 //bc online
 
 
-  var prefix = "$";
+  var prefix = "_";
 
   client.on("message", message => {
   
@@ -27,7 +27,7 @@ var adminprefix = '$'
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("$avatar")) {
+if (message.content.startsWith("_avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -41,19 +41,19 @@ client.on('ready',  () => {
 
 
   client.on('message', msg => {
-    if(msg.content === '$help')
+    if(msg.content === '_help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
   
   client.on("message", message => {
-    if (message.content === "$help") {
+    if (message.content === "_help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       $bc  |  لأرسال برود كاست للأونلاين
+       _bc  |  لأرسال برود كاست للأونلاين
 	   
 	   البوت شغال 24 ساعه  + لا يخذ بان .. 
 	   مبرمجه البوت Yara . 
